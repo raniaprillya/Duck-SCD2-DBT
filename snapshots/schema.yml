@@ -1,0 +1,8 @@
+
+version: 2
+
+snapshots:
+  - name: snp_customer
+    description: "A snapshot of the customer source table checking all columns for changes"
+  - name: snp_product
+    description: "A snapshot of the customer source table checking all columns for changes"

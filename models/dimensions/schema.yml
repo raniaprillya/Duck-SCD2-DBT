@@ -1,0 +1,118 @@
+
+version: 2
+
+models:
+  - name: dim_customer
+    description: "A type 2 dimension table containing customer information, tracking changes across all attributes"
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customerId
+        description: "The primary key for this table"
+        data_type: VARCHAR
+        data_tests:
+          - unique
+          - not_null
+      - name: regionName
+        description: "The business key for this table"
+        data_type: VARCHAR
+        data_tests:
+          - not_null     
+      - name: customerName
+        description: "The datetime that the record was loaded into the data warehouse"
+        data_type: VARCHAR
+        data_tests:
+          - not_null
+      - name: contactNumber
+        description: "The datetime the record is valid from given this is a Type 2 Dimension"
+        data_type: VARCHAR
+        data_tests:
+          - not_null
+      - name: Email
+        description: "The datetime the record is valid to given this is a Type 2 Dimension"
+        data_type: VARCHAR
+        data_tests:
+          - not_null
+      - name: loyaltyStatus
+        description: "The name of the employee in the format 'Last Name, First Name'"
+        data_type: VARCHAR
+        data_tests:
+          - not_null
+      - name: created_time
+        description: "The name of the department the employee belongs to"
+        data_type: TIMESTAMP
+        data_tests:
+          - not_null   
+      - name: dbt_updated_at
+        description: "The name of the department the employee belongs to"
+        data_type: TIMESTAMP
+        data_tests:
+          - not_null
+      - name: dbt_valid_to
+        description: "The name of the department the employee belongs to"
+        data_type: TIMESTAMP
+        data_tests:
+          - not_null   
+
+models:
+  - name: dim_transaction
+    description: "A type 2 dimension table containing transaction information, tracking changes across all attributes"
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: transactionId
+        description: "The primary key for this table"
+        data_type: VARCHAR
+        data_tests:
+          - unique
+          - not_null   
+      - name: customerId
+        description: "The name of the department the employee belongs to"
+        data_type: VARCHAR
+        data_tests:
+          - not_null    
+      - name: productId
+        description: "The name of the department the employee belongs to"
+        data_type: VARCHAR
+        data_tests:
+          - not_null  
+      - name: productName
+        description: "The name of the department the employee belongs to"
+        data_type: VARCHAR
+        data_tests:
+          - not_null   
+      - name: description
+        description: "The name of the department the employee belongs to"
+        data_type: VARCHAR
+        data_tests:
+          - not_null    
+      - name: description
+        description: "The name of the department the employee belongs to"
+        data_type: VARCHAR
+      - name: amount
+        description: "The name of the department the employee belongs to"
+        data_type: BIGINT
+        data_tests:
+          - not_null
+      - name: price
+        description: "The name of the department the employee belongs to"
+        data_type: DOUBLE
+        data_tests:
+          - not_null
+      - name: dicount
+        description: "The name of the department the employee belongs to"
+        data_type: DOUBLE
+        data_tests:
+          - not_null
+      - name: finalPrice
+        description: "The name of the department the employee belongs to"
+        data_type: DOUBLE
+        data_tests:
+          - not_null     
+      - name: transactionDate
+        description: "The name of the department the employee belongs to"
+        data_type: TIMESTAMP
+        data_tests:
+          - not_null               

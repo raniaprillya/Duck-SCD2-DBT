@@ -1,0 +1,10 @@
+
+version: 2
+
+models:
+  - name: stg_customer
+    description: "A staging view containing customer information with hard rules applied"
+  - name: stg_transaction
+    description: "A staging view containing transaction information with hard rules applied"
+  - name: stg_product
+    description: "A staging view containing transaction information with hard rules applied"

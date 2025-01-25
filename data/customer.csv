@@ -1,0 +1,4 @@
+customerID,RegionName,customerName,contactNumber,Email,loyaltyStatus,flagActive
+C001,North,John Doe,123-456-7890,john.doe@email.com,Gold,True
+C002,South,Jane Smith,234-567-8901,jane.smith@email.com,Silver,True
+C003,East,Bob Johnson,345-678-9012,bob.johnson@email.com,Bronze,False
